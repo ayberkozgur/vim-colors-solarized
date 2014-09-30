@@ -553,7 +553,7 @@ exe "hi! Identifier"     .s:fmt_none   .s:fg_blue   .s:bg_none
 "       *Identifier      any variable name
 "        Function        function name (also: methods for classes)
 "
-exe "hi! Statement"      .s:fmt_none   .s:fg_base01  .s:bg_none
+exe "hi! Statement"      .s:fmt_bold   .s:fg_base0  .s:bg_none
 "       *Statement       any statement
 "        Conditional     if, then, else, endif, switch, etc.
 "        Repeat          for, do, while, etc.
@@ -618,7 +618,7 @@ exe "hi! IncSearch"      .s:fmt_stnd   .s:fg_orange .s:bg_none
 exe "hi! Search"         .s:fmt_revr   .s:fg_yellow .s:bg_none
 exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
-exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02
+exe "hi! LineNr"         .s:fmt_none   .s:fg_base0  .s:bg_base02
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
 if ( has("gui_running") || &t_Co > 8 )
     exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_base00
@@ -629,8 +629,8 @@ exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
 exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base02 .s:fmt_revbb
 exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
 exe "hi! WildMenu"       .s:fmt_none   .s:fg_base2  .s:bg_base02 .s:fmt_revbb
-exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  .s:sp_base03
-exe "hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02
+exe "hi! Folded"         .s:fmt_none   .s:fg_base01 .s:bg_none   .s:sp_none
+exe "hi! FoldColumn"     .s:fmt_none   .s:fg_none   .s:bg_none
 if      (g:solarized_diffmode=="high")
 exe "hi! DiffAdd"        .s:fmt_revr   .s:fg_green  .s:bg_none
 exe "hi! DiffChange"     .s:fmt_revr   .s:fg_yellow .s:bg_none
@@ -758,7 +758,15 @@ hi! link gitcommitUnmergedArrow  gitcommitUnmergedFile
 "exe "hi! gitcommitBlank"
 " }}}
 " c/c++ highlighting "{{{
-exe "hi! cppAccessLabels"       .s:fmt_bold     .s:fg_violet    .s:bg_base02
+exe "hi! cppAccessLabels"               .s:fmt_bold     .s:fg_violet    .s:bg_base02
+exe "hi! doxygenComment"                .s:fmt_bold     .s:fg_violet    .s:bg_base03
+exe "hi! doxygenBody"                   .s:fmt_bold     .s:fg_violet    .s:bg_base03
+exe "hi! doxygenParam"                  .s:fmt_bold     .s:fg_violet    .s:bg_base03
+exe "hi! doxygenBOther"                 .s:fmt_bold     .s:fg_violet    .s:bg_base03
+exe "hi! doxygenSpecialOnelineDesc"     .s:fmt_none     .s:fg_base01    .s:bg_base03
+exe "hi! doxygenSpecialTypeOnelineDesc" .s:fmt_none     .s:fg_base01    .s:bg_base03
+exe "hi! doxygenBrief"                  .s:fmt_bold     .s:fg_base01    .s:bg_base03
+
 " }}}
 " html highlighting "{{{
 " ---------------------------------------------------------------------
